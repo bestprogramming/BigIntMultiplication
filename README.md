@@ -117,5 +117,5 @@ ExpectedTick(max) belongs to BigInteger.
 |2048                |2048                |19690               |99399               |504%	 |
 
 ## Conclusion
-This method can provide better performance than BigInteger for values ??smaller than 1234 digits. 
+This method can provide better performance than BigInteger for values smaller than 1234 digits. 
 Perhaps using this method, two 64-bit numbers can be multiplied simultaneously with AVX-256 and all performance lines can be achieved.
