@@ -62,6 +62,20 @@ namespace Tests
             value = ToBigInteger(bits);
             digits = value.ToString().Length;
             Assert.Equal(9865, digits);
+
+            length = 1024;
+            bits = new ulong[length];
+            for (var n = 0; n < length; n++) bits[n] = uint.MaxValue;
+            value = ToBigInteger(bits);
+            digits = value.ToString().Length;
+            Assert.Equal(19719, digits);
+
+            length = 2048;
+            bits = new ulong[length];
+            for (var n = 0; n < length; n++) bits[n] = uint.MaxValue;
+            value = ToBigInteger(bits);
+            digits = value.ToString().Length;
+            Assert.Equal(39447, digits);
         }
     }
 }
