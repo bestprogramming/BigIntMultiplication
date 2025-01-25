@@ -362,31 +362,3 @@ MigrationBackup/
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
 
-
-
-# Exclude binary files (.exe, .dll, .so, .dylib)
-*.exe
-*.dll
-*.so
-*.dylib
-
-# Exclude image files
-*.png
-*.jpg
-*.jpeg
-*.gif
-
-# Exclude compressed files
-*.zip
-*.tar.gz
-*.rar
-
-# Exclude compiled object files
-*.o
-*.obj
-*.a
-*.lib
-
-# Exclude other common binary file types
-*.class
-*.pyc
