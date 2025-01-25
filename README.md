@@ -9,7 +9,7 @@ Especially if features like AVX, 64 bit multiplication and writing the result as
 When performing mathematical operations, we may need operations with higher precision than numbers such as double or float. For example, if we want to find the roots of a quartic function as a double, the input of the function must be greater than the double precision.
 
 | Length | Byte Count | Decimal Count |
-|--------|----------------------------|
+| :----- | :--------- | :------------ |
 |  8     |  64        |  155          |
 |  16    |  128       |  309          |
 |  32    |  256       |  617          |
