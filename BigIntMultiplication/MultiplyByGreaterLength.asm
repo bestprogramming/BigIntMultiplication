@@ -12,6 +12,41 @@
 
 MultiplyByGreaterLength proc export
 	mov rdi, [rsp + 40]
+
+;rightLength1
+	cmp edx, 1
+	jnz rightLength1_end
+	push rcx
+	mov r9, [r9]
+	xor r13, r13
+do_while:
+	mov rax, [r8]
+	mov rdx, r9
+	mul rdx
+
+;add_rax
+	add r13, rax
+	mov [rdi], r13
+;add_rax_end
+
+	mov r13, rdx
+
+	lea r8, [r8 + 8]
+	lea rdi, [rdi + 8]
+		
+	loopnz do_while
+;do_while_end
+	pop rax
+;add_rdx
+	cmp rdx, 0
+	jz add_rdx_end
+	inc eax
+	mov [rdi], rdx
+add_rdx_end:	
+	ret
+rightLength1_end:
+
+
 	push rbp
 
 	mov esi, ecx	
@@ -40,7 +75,7 @@ start_inner:
 	add r13, rax
 ;add_rax_end
 
-add_rdx_start:
+;add_rdx_start:
 	adc r14, rdx
 	jnc add_rdx_start_end
 ;carry
@@ -84,7 +119,7 @@ middle_inner:
 	add r13, rax
 ;add_rax_end
 
-add_rdx_middle:
+;add_rdx_middle
 	adc r14, rdx
 	jnc add_rdx_middle_end
 ;carry
@@ -123,7 +158,7 @@ finish_inner:
 	add r13, rax
 ;add_rax_end
 
-add_rdx_finish:
+;add_rdx_finish
 	adc r14, rdx
 	jnc add_rdx_finish_end
 ;carry
