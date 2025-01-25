@@ -24,7 +24,8 @@ For example, if we want to find the roots of a quartic function as a double, the
 
 ## Calculation Process
 For example, if leftLength is 8 and rightLength is 5, the order of operations is listed in the table below. 
-Result Index is the index where the multiplication result will be written. Left Index, Right Index values ??are multiplied and each product is added and written to Result Index. 
+Result Index is the index where the multiplication result will be written. 
+Left Index, Right Index values are multiplied and each product is added and written to Result Index. 
 Rows can be divided into 3 regions. Start [0-4], middle [5-7], finish [8, 11]. 
 Thus, the code is run without making too many checks in loops.
 
