@@ -46,7 +46,7 @@ Thus, the code is run without making too many checks in loops.
 
 ## Performance Results
 In the performance table below, two random 64-bit numbers of length leftLengt and rightLength were multiplied. 
-Each line was run 300 times and the minimum ElapsedTicks values ??were written with StopWatch. 
+Each line was run 300 times and the minimum ElapsedTicks values were written with StopWatch. 
 ExpectedTick(max) belongs to BigInteger.
 
 |leftLength          |rightLength         |expectedTick(max)   |actualTick          |Percent |
