@@ -20,12 +20,6 @@ When performing mathematical operations, we may need operations with higher prec
 |  1024  |  8192      |  19719        |
 |  2048  |  16384     |  39447        |
 
-| Item              | In Stock | Price |
-| :---------------- | :------: | ----: |
-| Python Hat        |   True   | 23.99 |
-| SQL Hat           |   True   | 23.99 |
-| Codecademy Tee    |  False   | 19.99 |
-| Codecademy Hoodie |  False   | 42.99 |
 
 
 
