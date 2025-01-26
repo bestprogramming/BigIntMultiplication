@@ -45,5 +45,7 @@ namespace Tests
             return new BigInteger(bytes);
         }
 
+        protected static string Percent(long expectedTick, long actualTick) => expectedTick != 0 ? $"{actualTick * 100 / expectedTick}%" : $"{actualTick}/0?";
+
     }
 }

@@ -136,8 +136,8 @@ namespace Tests
             var expectedTicks = new List<long>();
 
             var testCount = 100;
-            var leftLength = 2048;
-            var rightLength = 2048;
+            var leftLength = 8192;
+            var rightLength = 8192;
 
             for (var test = 0; test < testCount; test++)
             {
@@ -153,9 +153,6 @@ namespace Tests
                     right[n] = RandomUlong();
                 }
 
-                //var index = -1; output.WriteLine(left.Aggregate("", (c, n) => { index++; return c + (c != "" ? "\r\n" : "") + $"left[{index}] = {n};"; }));
-                //index = -1; output.WriteLine(right.Aggregate("", (c, n) => { index++; return c + (c != "" ? "\r\n" : "") + $"right[{index}] = {n};"; }));
-
                 var b1 = ToBigInteger(left);
                 var b2 = ToBigInteger(right);
 
@@ -169,7 +166,7 @@ namespace Tests
                 swActual.Stop();
                 actualTicks.Add(swActual.ElapsedTicks);
 
-                //Assert.True(Eq(expected, actual));
+                Assert.True(Eq(expected, actual));
             }
 
             expectedTicks.Sort();
@@ -239,7 +236,7 @@ namespace Tests
 
                     var expectedTick = expectedTicks.First();
                     var actualTick = actualTicks.First();
-                    table += $"\t\t\t{leftLength,-20}{rightLength,-20}{expectedTick,-20}{actualTick,-20}{actualTick * 100 / expectedTick}%\r\n";
+                    table += $"\t\t\t{leftLength,-20}{rightLength,-20}{expectedTick,-20}{actualTick,-20}{Percent(expectedTick, actualTick)}\r\n";
                 }
             }
 
