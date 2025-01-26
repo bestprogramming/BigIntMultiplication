@@ -76,7 +76,8 @@ add_rdx_start_end:
 
 	inc r12d
 	lea rdi, [rdi + 8]
-	loopnz start
+	dec ecx
+	jnz start
 ;start_end
 
 
@@ -119,7 +120,8 @@ add_rdx_finish_end:
 
 	inc r12d
 	lea rdi, [rdi + 8]
-	loopnz finish
+	dec ecx
+	jnz finish
 ;finish_end
 
 

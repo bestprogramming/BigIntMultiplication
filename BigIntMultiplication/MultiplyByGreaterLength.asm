@@ -34,7 +34,8 @@ do_while:
 	lea r8, [r8 + 8]
 	lea rdi, [rdi + 8]
 		
-	loopnz do_while
+	dec ecx
+	jnz do_while
 ;do_while_end
 	pop rax
 ;add_rdx
@@ -94,7 +95,8 @@ add_rdx_start_end:
 
 	inc r12d
 	lea rdi, [rdi + 8]
-	loopnz start
+	dec ecx
+	jnz start
 ;start_end
 
 
@@ -137,7 +139,8 @@ add_rdx_middle_end:
 
 	inc r12d
 	lea rdi, [rdi + 8]
-	loopnz middle
+	dec ecx
+	jnz middle
 ;middle_end
 
 
@@ -177,7 +180,8 @@ add_rdx_finish_end:
 
 	inc r12d
 	lea rdi, [rdi + 8]
-	loopnz finish
+	dec ecx
+	jnz finish
 ;finish_end
 
 	mov eax, esi
