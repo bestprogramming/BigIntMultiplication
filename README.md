@@ -45,9 +45,9 @@ Thus, the code is run without making too many checks in loops.
 |11          |&nbsp;&nbsp;&nbsp;&nbsp;X&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;X&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;X&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;X&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;X&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;X&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;X&nbsp;&nbsp;&nbsp;&nbsp;7,4&nbsp;&nbsp;&nbsp;&nbsp;X&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;X&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;X&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;X&nbsp;&nbsp;&nbsp;|
 
 ## Performance Results
-In the performance table below, two random 64-bit numbers of length leftLengt and rightLength were multiplied. 
-Each line was run 300 times and the minimum ElapsedTicks values were written with StopWatch. 
-ExpectedTick(max) belongs to BigInteger.
+In the performance table below, two random 64-bit numbers of length leftLength and rightLength were multiplied. 
+Each line was run 300 times and the minimum ElapsedTicks values were written with StopWatch(.NET). 
+ExpectedTick(max) belongs to BigInteger(.NET).
 
 |leftLength          |rightLength         |expectedTick(max)   |actualTick          |Percent |
 | :----------------- | :----------------- | :----------------- | :----------------- | :----- |
